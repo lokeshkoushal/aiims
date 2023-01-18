@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aiims.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="submit" class="btn" id="btn1" onclick="openPopup()" value="GANERATE TOKEN"></button>
+        <div class="popup" id="popup">
+            <img src="72178594.webp">
+            <h2 id="num">50</h2>
+            <p> TOKAN NUMBER has been your screen <br> thank!</p>
+            <button type="button"  onclick="closePopup()">Done</button> 
+
+        </div>
+    </div>
+<script>
+
+    let popup =document.getElementById("popup");
+    function openPopup(){
+        popup.classList.add("open-popup");
+    }
+    function closePopup(){
+       popup.classList.remove("open-popup");
+    }
+     var count = 0;
+    $(document).ready(function(){
+     
+         $("#btn1").click(function(){
+            count++;
+            $("#num").html("Token Number " +count);
+
+         });
+
+    });
+</script>
+</body>
+</html>
